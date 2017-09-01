@@ -17,7 +17,8 @@
 1) Установить php 7.1, postgress и веб-сервер. 
 2) Создайте папку для проекта. Скачайте и распакуйте проект в ее корень
 3) Создайте БД в PostgreSQL
-----------------------------------
+
+
 sudo -u postgres psql -c "CREATE USER root WITH PASSWORD 'root'"
 service postgresql restart
 sudo -u postgres psql -c "CREATE DATABASE yii2advanced"
@@ -25,7 +26,8 @@ sudo -u postgres psql -c "CREATE DATABASE yii2advanced_test"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE yii2advanced TO root"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE yii2advanced_test TO root"
 service postgresql restart
-----------------------------------
+
+
 4) Поправить конфиги вебсервера, указав пути к бекенду и фронтенду, а также домены. В конфиге фреймворка указать данные для подключения к БД
 5) Перейти из консоли в папку с проектом
 6) Выполнить yii migrate
