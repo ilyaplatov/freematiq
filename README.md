@@ -20,11 +20,17 @@
 
 
 sudo -u postgres psql -c "CREATE USER root WITH PASSWORD 'root'"
+
 service postgresql restart
+
 sudo -u postgres psql -c "CREATE DATABASE yii2advanced"
+
 sudo -u postgres psql -c "CREATE DATABASE yii2advanced_test"
+
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE yii2advanced TO root"
+
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE yii2advanced_test TO root"
+
 service postgresql restart
 
 
