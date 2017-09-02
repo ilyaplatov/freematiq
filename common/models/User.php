@@ -133,7 +133,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
 
         return static::findOne([
-            '$email_confirm_token' => $token,
+            'email_confirm_token' => $token,
             'status' => self::STATUS_WAIT,
         ]);
     }
