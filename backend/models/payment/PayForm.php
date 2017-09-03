@@ -20,7 +20,7 @@ class PayForm extends Model
             ['email', 'exist', 'targetClass' => User::class],
 
             ['amount', 'required'],
-            ['amount', 'integer', 'min' => 0],
+            ['amount', 'number', 'min' => 0],
             ['amount', AmountValidator::class],
         ];
     }

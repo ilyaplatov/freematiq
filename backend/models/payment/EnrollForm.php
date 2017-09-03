@@ -13,7 +13,7 @@ class EnrollForm extends Model
     {
         return [
             ['amount', 'required'],
-            ['amount', 'integer', 'min' => 0],
+            ['amount', 'number', 'min' => 0],
             ['amount', AmountValidator::class],
         ];
     }

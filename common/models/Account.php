@@ -23,12 +23,15 @@ class Account extends ActiveRecord
 
     public function enroll($amount)
     {
+        if ($amount == 0) {
+            throw new \DomainException('Amount must be > 0.');
+        }
         $this->amount += $amount;
     }
 
     public function charge($amount)
     {
-        if ($this->amount < $amount) {
+        if ($this->amount < $amount || $amount == 0) {
             throw new \DomainException('Unable to charge.');
         }
         $this->amount -= $amount;
