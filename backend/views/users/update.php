@@ -7,9 +7,9 @@ use yii\helpers\Html;
 /* @var $model \backend\models\user\UserEditForm */
 /* @var $user common\models\User */
 
-$this->title = 'Update User: ' . $user->id;
+$this->title = 'Update User: ' . $user->email;
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $user->id, 'url' => ['view', 'id' => $user->id]];
+$this->params['breadcrumbs'][] = ['label' => $user->email, 'url' => ['view', 'id' => $user->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="user-update">
