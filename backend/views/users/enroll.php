@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
 
 $this->title = 'Enroll';
 $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $user->id, 'url' => ['view', 'id' => $user->id]];
+$this->params['breadcrumbs'][] = ['label' => $user->email, 'url' => ['view', 'id' => $user->id]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
