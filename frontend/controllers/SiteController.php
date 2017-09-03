@@ -196,9 +196,9 @@ class SiteController extends Controller
         if ($user) {
             Yii::$app->session->setFlash('success', 'Signup is confirmed.');
             Yii::$app->getUser()->login($user);
+        } else {
+            Yii::$app->session->setFlash('error', 'Sorry, we are unable to confirm.');
         }
-        Yii::$app->session->setFlash('error', 'Sorry, we are unable to confirm.');
-
         return $this->goHome();
     }
 
